@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.virginmoney.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_people"
+        android:name="com.example.virginmoney.ui.people.PeopleFragment"
+        android:label="@string/menu_people"
+        tools:layout="@layout/fragment_people" />
+
+    <fragment
+        android:id="@+id/nav_rooms"
+        android:name="com.example.virginmoney.ui.rooms.RoomsFragment"
+        android:label="@string/menu_rooms"
+        tools:layout="@layout/fragment_rooms" />
+</navigation>
