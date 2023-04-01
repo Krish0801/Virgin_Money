@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.virginmoney.databinding.FragmentRoomsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RoomsFragment : Fragment() {
 
     private var _binding: FragmentRoomsBinding? = null

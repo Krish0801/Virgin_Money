@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.virginmoney.databinding.FragmentPeopleBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PeopleFragment : Fragment() {
 
     private var _binding: FragmentPeopleBinding? = null
