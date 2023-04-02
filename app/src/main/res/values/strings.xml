@@ -10,4 +10,10 @@
     <string name="menu_home">Home</string>
     <string name="menu_people">Peoples</string>
     <string name="menu_rooms">Rooms</string>
+    <string name="menu_peopleDetails">People Detail</string>
+    <string name="heading_id">ID:</string>
+    <string name="heading_firstName">NAME:</string>
+    <string name="heading_jobTitle">JOB TITLE:</string>
+    <string name="heading_email">E-MAIL:</string>
+    <string name="heading_favouriteColor">FAVOURITE COLOUR:</string>
 </resources>

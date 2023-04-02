@@ -12,4 +12,4 @@ data class RoomsModelItemModel(
     val isOccupied: Boolean? = false,
     @SerializedName("maxOccupancy")
     val maxOccupancy: Int? = 0
-)
+):java.io.Serializable

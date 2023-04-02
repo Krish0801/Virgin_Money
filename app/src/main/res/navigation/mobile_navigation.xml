@@ -22,4 +22,9 @@
         android:name="com.example.virginmoney.ui.rooms.RoomsFragment"
         android:label="@string/menu_rooms"
         tools:layout="@layout/fragment_rooms" />
+    <fragment
+        android:id="@+id/nav_peopleDetail"
+        android:name="com.example.virginmoney.ui.peopleDetail.PeopleDetailFragment"
+        android:label="@string/menu_peopleDetails"
+        tools:layout="@layout/fragment_people_detail" />
 </navigation>

@@ -1,6 +1,5 @@
 package com.example.virginmoney.data.repository
 
-import com.example.virginmoney.data.model.rooms.RoomsModel
 import com.example.virginmoney.data.remote.ApiRequest
 import javax.inject.Inject
 

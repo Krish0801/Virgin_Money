@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">642958715a40b82da4d0f7d5.mockapi.io</domain>
+        <trust-anchors>
+            <certificates src="@raw/mockapi"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

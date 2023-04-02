@@ -1,44 +1,65 @@
 package com.example.virginmoney.ui.people
 
 import android.os.Bundle
+import android.provider.Contacts
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.virginmoney.data.model.people.PeopleModel
+import com.example.virginmoney.data.model.people.PeopleModelItemModel
+import com.example.virginmoney.data.model.rooms.RoomsModel
+import com.example.virginmoney.data.model.rooms.RoomsModelItemModel
 import com.example.virginmoney.databinding.FragmentPeopleBinding
+import com.example.virginmoney.databinding.FragmentRoomsBinding
+import com.example.virginmoney.ui.rooms.RoomsAdapter
+import com.example.virginmoney.ui.rooms.RoomsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class PeopleFragment : Fragment() {
-
+    private lateinit var viewModel: PeopleViewModel
     private var _binding: FragmentPeopleBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
+
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val peopleViewModel =
-            ViewModelProvider(this).get(PeopleViewModel::class.java)
-
+    ): View? {
+        viewModel =
+            ViewModelProvider(this)[PeopleViewModel::class.java]
         _binding = FragmentPeopleBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        peopleViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        viewModel.people.observe(viewLifecycleOwner) {
+            it?.let {
+                setupUI(it)
+            }
         }
-        return root
+
+        viewModel.getPeople()
+
+        return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    private fun setupUI(people: PeopleModel){
+        val peopleAdapter = PeopleAdapter(people.data as ArrayList<PeopleModelItemModel>?)
+        binding.rvPeople.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = peopleAdapter
+        }
+        peopleAdapter.onItemClick = {
+            val bundle = Bundle().apply {
+                putSerializable("PeopleItem", it)
+            }
+//            findNavController().navigate(
+//                R.id.action_assets_to_asset_details, bundle
+//            )
+        }
+
     }
 }

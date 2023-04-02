@@ -2,6 +2,8 @@ package com.example.virginmoney.di
 
 import com.example.virginmoney.data.remote.ApiDetails
 import com.example.virginmoney.data.remote.ApiRequest
+import com.example.virginmoney.data.repository.Repository
+import com.example.virginmoney.data.repository.RepositoryImp
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -48,5 +50,9 @@ class AppModule {
         return retrofit.create(ApiRequest::class.java)
     }
 
+    @Provides
+    fun provideRepository(apiRequest: ApiRequest): Repository {
+        return RepositoryImp(apiRequest)
+    }
 
 }

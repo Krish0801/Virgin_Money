@@ -32,4 +32,4 @@ data class PeopleModelItemModel(
     val to: String? = "",
     @SerializedName("type")
     val type: String? = ""
-)
+):java.io.Serializable

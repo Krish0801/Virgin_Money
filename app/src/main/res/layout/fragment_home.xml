@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="265dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="32dp"
-        android:src="@mipmap/ic_launcher_virgin_money_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/text_home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
@@ -36,7 +22,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintVertical_bias="0.528" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="375dp"
+        android:layout_height="313dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="32dp"
+        android:src="@mipmap/ic_launcher_virgin_money_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/text_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
