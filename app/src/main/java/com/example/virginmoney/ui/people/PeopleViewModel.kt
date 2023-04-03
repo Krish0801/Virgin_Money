@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.virginmoney.data.model.people.PeopleModel
+import com.example.virginmoney.data.model.people.PeopleModelItemModel
 import com.example.virginmoney.data.model.rooms.RoomsModel
 import com.example.virginmoney.data.remote.ApiDetails
 import com.example.virginmoney.data.remote.ApiRequest
@@ -19,7 +20,7 @@ class PeopleViewModel @Inject constructor(
     val repository: Repository
 ) : ViewModel() {
 
-    val people = MutableLiveData<PeopleModel>()
+    val people = MutableLiveData<ArrayList<PeopleModelItemModel>>()
 
     fun getPeople() {
 

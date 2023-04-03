@@ -36,7 +36,7 @@ class PeopleDetailFragment : Fragment() {
         binding.jobTitle.text = people.jobtitle
         binding.favouriteColor.text = people.favouriteColor
 
-        Glide.with(requireView())
+        Glide.with(this)
             .load(people?.avatar) // image url
             .placeholder(R.drawable.card_red) // any placeholder to load at start
             .error(R.drawable.ic_menu_gallery)  // any image in case of error

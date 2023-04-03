@@ -15,7 +15,11 @@
         android:id="@+id/nav_people"
         android:name="com.example.virginmoney.ui.people.PeopleFragment"
         android:label="@string/menu_people"
-        tools:layout="@layout/fragment_people" />
+        tools:layout="@layout/fragment_people" >
+        <action
+            android:id="@+id/action_nav_people_to_nav_peopleDetail"
+            app:destination="@id/nav_peopleDetail" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_rooms"

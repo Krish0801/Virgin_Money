@@ -26,7 +26,7 @@ class PeopleAdapter(val people: ArrayList<PeopleModelItemModel>?) :
                 .load(item?.avatar) // image url
                 .placeholder(R.drawable.card_red) // any placeholder to load at start
                 .error(R.drawable.ic_menu_gallery)  // any image in case of error
-                .override(200, 200) // resizing
+                //.override(300, 300) // resizing
                 .centerCrop()
                 .into(binding.avatar);
         }

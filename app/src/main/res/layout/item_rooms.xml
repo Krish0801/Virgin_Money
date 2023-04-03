@@ -6,14 +6,22 @@
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
     android:elevation="8dp"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="10dp"
     app:cardUseCompatPadding="true">
+    <View
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/red_virgin"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:id="@+id/bg"
         android:layout_height="wrap_content"
-        android:background="@drawable/card_red"
         android:padding="10dp">
+
+
 
         <TextView
             android:id="@+id/heading_id"
@@ -66,13 +74,15 @@
 
         <TextView
             android:id="@+id/rooms_isOccupied"
-            android:layout_width="wrap_content"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Is Occupied"
+            android:text="Is"
             android:layout_marginEnd="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/heading_isOccupied"
-            android:textAlignment="center"/>
+           android:textAlignment="center"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

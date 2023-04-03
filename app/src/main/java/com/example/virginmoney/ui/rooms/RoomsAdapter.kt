@@ -1,5 +1,6 @@
 package com.example.virginmoney.ui.rooms
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +24,11 @@ class RoomsAdapter(val rooms: ArrayList<RoomsModelItemModel>?) :
             binding.roomsId.text = item?.id
             binding.roomsMaxOccupancy.text = item?.maxOccupancy.toString()
             binding.roomsIsOccupied.text = item?.isOccupied.toString()
+            if (item?.isOccupied == true) {
+                binding.bg.setBackgroundColor(Color.parseColor("#C40202"))
+            }else{
+                binding.bg.setBackgroundColor(Color.parseColor("#1E5631"))
+            }
         }
 
     }

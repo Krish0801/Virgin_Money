@@ -16,7 +16,7 @@ class RoomsViewModel @Inject constructor(
     val repository: Repository
 ) : ViewModel() {
 
-    val rooms = MutableLiveData<RoomsModel>()
+    val rooms = MutableLiveData<ArrayList<RoomsModelItemModel>>()
 
     fun getRooms() {
         //val result = ApiDetails.getInstance(ApiDetails.BASE_URL).create(ApiRequest::class.java)
